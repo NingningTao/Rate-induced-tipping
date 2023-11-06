@@ -4,6 +4,8 @@ from libc.math cimport sqrt
 cimport cython
 ctypedef np.float64_t DT
 
+
+# 
 cpdef estimated_ac1(np.ndarray[DT, ndim=1, negative_indices=False, mode='c'] x, int lag):
     cdef DT results
     result = 1/cy_mult_sum(x,x)*cy_ac(x,lag)
